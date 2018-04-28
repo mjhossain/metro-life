@@ -30,7 +30,10 @@ mta.status('subway').then(function (result) {
     //
    // console.log(result);
    var j = JSON.parse(result);
-    showDataFor('123', j);
+
+   console.log(showDataOf(0, j))
+
+    // showDataFor('7', j);
     //
      // fs.writeFile("data.json", result, function(err) {
      //     if (err) {
@@ -48,7 +51,10 @@ mta.status('subway').then(function (result) {
 //     }
 //     var $ = require("jquery")(window);
 // });
-
+ function showDataOf(train, data){
+    let selected_train = data[train]
+    return selected_train.name + "\n" + selected_train.status;
+ }
 
 function showDataFor(line, data){
 
