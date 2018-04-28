@@ -1,6 +1,10 @@
+/* Preset Style */
 *{
     margin: 0;
     padding: 0;
+}
+body{
+    font-family: 'Helvetica', sans-serif;
 }
 .float-left{
     float: left;
@@ -8,26 +12,54 @@
 .float-right{
     float: right;
 }
-.header{
-    height: 70px;
+.display-none{
+    display: none;
 }
 
-.body{
-    /* background-color: black; */
-    /* height: 600px; */
-
+/* Header */
+header{
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    font-size: 32px;
+}
+.header{
+    height: 70px;
+    text-align: center;
 }
 .nav-header{
     height: 70px;
 }
+.logo-wrapper{
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Body */
+
+.status-bar{
+    /* opacity: 0; */
+}
+
 img{
     width: 100px;
 
 }
 main{
     background-color: black;
+    height: 85vh;
+}
+.body{
     position: relative;
 }
+
+.row:first-child{
+    padding-top: 20px;
+}
+.row{
+    padding: 15px;
+    /* position: absolute; */
+}
+
 a.mta-logo-link{
     height: 60px;
     margin-top: 10px;
@@ -36,6 +68,7 @@ a.mta-logo-link{
 }
 .item-container{
     display: inline-block;
+    margin: 0 8px;
 }
 .set-wrapper{
     display: flex;
@@ -52,6 +85,17 @@ a.mta-logo-link{
     display: block;
     clear: both;
 }
-footer{
 
+/* Footer */
+
+footer{
+    background-color: rgba(0,0,0,1);
+    text-align: center;
+}
+.footer{
+    height: 28px;
+}
+.footer p{
+    padding-top: 5px;
+    color: white;
 }

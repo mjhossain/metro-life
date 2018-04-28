@@ -13,7 +13,7 @@ var port = 3000;
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
-app.use("/", express.static(__dirname + '/public'));
+app.use("/", express.static(__dirname + '/'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -38,6 +38,10 @@ mta.status('subway').then(function (result) {
  }).catch(function (err) {
      console.log(err);
  });
+
+ app.get('/',function(req,res){
+     res.render('index');
+ })
 
 
 app.listen(port,function(){
