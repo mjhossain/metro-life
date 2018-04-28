@@ -38,6 +38,10 @@ header{
 
 .status-bar{
     /* opacity: 0; */
+    height: 85vh;
+}
+.close{
+
 }
 
 img{
@@ -45,13 +49,24 @@ img{
 
 }
 main{
-    background-color: black;
     height: 85vh;
-}
-.body{
     position: relative;
+    display: flex;
 }
-
+.train-wrapper{
+    /* flex: auto; */
+    height: inherit;
+    background-color: black;
+    width: 60%;
+}
+.train-status{
+    /* flex: auto; */
+    padding-top: 25px;
+    text-align: center;
+    width: 40%;
+    background-color: white;
+    border: 2px blue solid;
+}
 .row:first-child{
     padding-top: 20px;
 }

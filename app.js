@@ -8,6 +8,7 @@ var mta = new Mta({
   key: '91a371c98bd07ad884c3e400c9e23a68', // only needed for mta.schedule() method
   feed_id: 1                  // optional, default = 1
 });
+// var requirejs = require('requirejs');
 var port = 3000;
 
 app.engine('html', mustacheExpress());
@@ -39,16 +40,8 @@ mta.status('subway').then(function (result) {
      console.log(err);
  });
 
-//  require("jsdom").env("", function(err, window) {
-//     if (err) {
-//         console.error(err);
-//         return;
-//     }
-//     var $ = require("jquery")(window);
-// });
-
-
  app.get('/',function(req,res){
+
      res.render('index');
  })
 
