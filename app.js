@@ -28,7 +28,9 @@ mta.status('subway').then(function (result) {
     //
 	result = result.replace(regex, ""); //Calling 1st regex
     //
-    console.log(result);
+   // console.log(result);
+   var j = JSON.parse(result);
+    showDataFor('123', j);
     //
      // fs.writeFile("data.json", result, function(err) {
      //     if (err) {
@@ -47,6 +49,15 @@ mta.status('subway').then(function (result) {
 //     var $ = require("jquery")(window);
 // });
 
+
+function showDataFor(line, data){
+
+    for(var i = 0; i < data.length; i++){
+
+        var lineRow = data[i];
+        console.log(data[i].name);
+      }
+}
 
  app.get('/',function(req,res){
      res.render('index');
