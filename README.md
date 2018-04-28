@@ -3,7 +3,6 @@ This is a CUNY Hackathon Spring 2018 Project
 
 #Team
   1. Anthony -> @Duquea95 [Frontend/Backend]
-  2. Julian -> @JulianMarinJimenez [Frontend]
   3. Mohammed -> @mjhossain [Frontend/Backend]
   4. Rei -> @RB9973 [Frontend]
   5. Rojan -> @ROJAN99 [Frontend]
