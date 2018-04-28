@@ -27,8 +27,8 @@ mta.status('subway').then(function (result) {
     result = result.replace(reg," ");
     //
 	result = result.replace(regex, ""); //Calling 1st regex
-    //
-    console.log(result);
+    result = JSON.parse(result);
+     console.log(result[0])
     //
      // fs.writeFile("data.json", result, function(err) {
      //     if (err) {
