@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 70px;
+}
+
+.body{
+    /* background-color: black; */
+    /* height: 600px; */
+
+}
+img{
+    width: 100px;
+
+}
+main{
+    background-color: black;
+}
+a.mta-logo-link{
+    height: 60px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: .2rem;
+}
+.item-container{
+    display: inline-block;
+}
+.set-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.set-item{
+    max-width: 1400px;
+    flex: none;
+    text-align: center;
+}
+.set-wrapper{
+    content: " ";
+    display: block;
+    clear: both;
+}
+footer{
+
+}
