@@ -39,6 +39,15 @@ mta.status('subway').then(function (result) {
      console.log(err);
  });
 
+//  require("jsdom").env("", function(err, window) {
+//     if (err) {
+//         console.error(err);
+//         return;
+//     }
+//     var $ = require("jquery")(window);
+// });
+
+
  app.get('/',function(req,res){
      res.render('index');
  })
