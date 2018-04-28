@@ -29,7 +29,12 @@ mta.status('subway').then(function (result) {
     //
 	result = result.replace(regex, ""); //Calling 1st regex
     //
-    console.log(result);
+   // console.log(result);
+   var j = JSON.parse(result);
+
+   console.log(showDataOf(0, j))
+
+    // showDataFor('7', j);
     //
      // fs.writeFile("data.json", result, function(err) {
      //     if (err) {
@@ -40,6 +45,30 @@ mta.status('subway').then(function (result) {
      console.log(err);
  });
 
+<<<<<<< HEAD
+=======
+//  require("jsdom").env("", function(err, window) {
+//     if (err) {
+//         console.error(err);
+//         return;
+//     }
+//     var $ = require("jquery")(window);
+// });
+ function showDataOf(train, data){
+    let selected_train = data[train]
+    return selected_train.name + "\n" + selected_train.status;
+ }
+
+function showDataFor(line, data){
+
+    for(var i = 0; i < data.length; i++){
+
+        var lineRow = data[i];
+        console.log(data[i].name);
+      }
+}
+
+>>>>>>> c778d9ec19e56552c4e20b2f56e90d09fdcbee2b
  app.get('/',function(req,res){
 
      res.render('index');
