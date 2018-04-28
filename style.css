@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
 .header{
     height: 70px;
 }
@@ -11,12 +17,16 @@
     /* height: 600px; */
 
 }
+.nav-header{
+    height: 70px;
+}
 img{
     width: 100px;
 
 }
 main{
     background-color: black;
+    position: relative;
 }
 a.mta-logo-link{
     height: 60px;

@@ -1,0 +1,24 @@
+{
+  "name": "metro-life",
+  "version": "1.0.0",
+  "description": "A CUNY Hackathon website",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjhossain/metro-life.git"
+  },
+  "keywords": [
+    "CUNY",
+    "HACKATHON"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjhossain/metro-life/issues"
+  },
+  "homepage": "https://github.com/mjhossain/metro-life#readme"
+}
