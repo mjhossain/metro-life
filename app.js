@@ -44,6 +44,8 @@ mta.status('subway').then(function (result) {
  }).catch(function (err) {
      console.log(err);
  });
+
+
 //  require("jsdom").env("", function(err, window) {
 //     if (err) {
 //         console.error(err);
@@ -64,6 +66,11 @@ function showDataFor(line, data){
         console.log(data[i].name);
       }
 }
+
+app.get("/testFunction", function(){
+  console.log("Connected");
+})
+
  app.get('/',function(req,res){
 
      res.render('index');
