@@ -9,7 +9,7 @@
         <script>
           $(document).ready(function(){
             $('.line').click(function() { //this line of code needs change so that its dynamic
-                  alert("clicked");
+                  // alert("clicked");
                 //var catch_id = $('.line').attr('alt');
                 /*var catch_id = $('.line').attr
                     console.log(catch_id);*/
@@ -31,10 +31,11 @@
 
                    //console.log("data in memory") //indicates that data was retrived from node
                    //var json_data = JSON.stringify(data); // stringifies the object
-                   //var line_viewer = document.getElementById('train_line'); // gets the p tag that prints out line
+                   var line_viewer = document.getElementById('train_line'); // gets the p tag that prints out line
                    var status_viewer = document.getElementById('status_msg'); //gets the p tag that prints out line status
-                  // line_viewer.innerHTML = line_name; //writes the data object inside p tag of train line.
-                   status_viewer.innerHTML = JSON.stringify(data); //writes the data object inside p tag of line status
+                   line_viewer.innerHTML = JSON.stringify(data.name); //writes the data object inside p tag of train line.
+
+                   status_viewer.innerHTML = JSON.stringify(data.text); //writes the data object inside p tag of line status
                  },
                  error: console.error
                 });
