@@ -8,13 +8,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
           $(document).ready(function(){
-            $('#test').click(function() { //this line of code needs change so that its dynamic
+            $('.line').click(function() { //this line of code needs change so that its dynamic
+                  alert("clicked");
+                var catch_id = $('.line').attr('alt');
+                    console.log(catch_id);
 
+                // var line_id = catch_id.alt;
               event.preventDefault();
               $.ajax({
                 type: "GET",
                 url: "http://localhost:3000/getStatus",
-                 data: {line: '2'}, //this line has to change to
+                 data: {line: catch_id}, //this line has to change to
                  contentType: "application/json",
                  success: function(data) {
 
@@ -70,90 +74,42 @@
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img id="test" src="../assets/1.png" alt="MTA 1 Train" >
+                                        <img class="line" src="../assets/1.png" alt="0" >
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/2.png" alt="MTA 2 Train">
+                                        <img class="line" src="../assets/2.png" alt="0">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/3.png" alt="MTA 3 Train">
+                                        <img id="line" src="../assets/3.png" alt="0">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/4.png" alt="MTA 4 Train">
+                                        <img class="line" src="../assets/4.png" alt="1">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/5.png" alt="">
+                                        <img id="line" src="../assets/5.png" alt="1">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/6.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="set-wrapper">
-                        <div class="set-item">
-                            <div class="item-container">
-                                <a class="mta-logo-link" href="#">
-                                    <div class="train-logo-image">
-                                        <img src="../assets/B.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="item-container">
-                                <a class="mta-logo-link" href="#">
-                                    <div class="train-logo-image">
-                                        <img src="../assets/D.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="item-container">
-                                <a class="mta-logo-link" href="#">
-                                    <div class="train-logo-image">
-                                        <img src="../assets/F.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="item-container">
-                                <a class="mta-logo-link" href="#">
-                                    <div class="train-logo-image">
-                                        <img src="../assets/M.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="item-container">
-                                <a class="mta-logo-link" href="#">
-                                    <div class="train-logo-image">
-                                        <img src="../assets/L.png" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="item-container">
-                                <a class="mta-logo-link" href="#">
-                                    <div class="train-logo-image">
-                                        <img src="../assets/S.png" alt="">
+                                        <img id="line" src="../assets/6.png" alt="1">
                                     </div>
                                 </a>
                             </div>
@@ -166,42 +122,42 @@
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/N.png" alt="">
+                                        <img id="line" src="../assets/B.png" alt="4">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/R.png" alt="">
+                                        <img id="line" src="../assets/D.png" alt="4">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/Q.png" alt="">
+                                        <img id="line" src="../assets/F.png" alt="4">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/W.png" alt="">
+                                        <img id="line" src="../assets/M.png" alt="4">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/J.png" alt="">
+                                        <img id="line" src="../assets/L.png" alt="7">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/Z.png" alt="">
+                                        <img id="line" src="../assets/S.png" alt="9">
                                     </div>
                                 </a>
                             </div>
@@ -214,35 +170,83 @@
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/A.png" alt="">
+                                        <img id="line" src="../assets/N.png" alt="8">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/C.png" alt="">
+                                        <img id="line" src="../assets/R.png" alt="8">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/E.png" alt="">
+                                        <img id="line" src="../assets/Q.png" alt="8">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/G.png" alt="">
+                                        <img id="line" src="../assets/W.png" alt="">
                                     </div>
                                 </a>
                             </div>
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/7.png" alt="">
+                                        <img id="line" src="../assets/J.png" alt="6">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-container">
+                                <a class="mta-logo-link" href="#">
+                                    <div class="train-logo-image">
+                                        <img id="line" src="../assets/Z.png" alt="6">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="set-wrapper">
+                        <div class="set-item">
+                            <div class="item-container">
+                                <a class="mta-logo-link" href="#">
+                                    <div class="train-logo-image">
+                                        <img id="line" src="../assets/A.png" alt="3">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-container">
+                                <a class="mta-logo-link" href="#">
+                                    <div class="train-logo-image">
+                                        <img id="line" src="../assets/C.png" alt="3">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-container">
+                                <a class="mta-logo-link" href="#">
+                                    <div class="train-logo-image">
+                                        <img id="line" src="../assets/E.png" alt="3">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-container">
+                                <a class="mta-logo-link" href="#">
+                                    <div class="train-logo-image">
+                                        <img id="line" src="../assets/G.png" alt="5">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-container">
+                                <a class="mta-logo-link" href="#">
+                                    <div class="train-logo-image">
+                                        <img id="line" src="../assets/7.png" alt="2">
                                     </div>
                                 </a>
                             </div>
