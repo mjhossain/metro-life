@@ -8,13 +8,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
           $(document).ready(function(){
-            $('#test').click(function() {
+            $('#test').click(function() { //this line of code needs change so that its dynamic
 
               event.preventDefault();
               $.ajax({
                 type: "GET",
                 url: "http://localhost:3000/getStatus",
-                 data: {line: '2'},
+                 data: {line: '2'}, //this line has to change to
                  contentType: "application/json",
                  success: function(data) {
 
