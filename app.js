@@ -44,9 +44,6 @@ mta.status('subway').then(function (result) {
  }).catch(function (err) {
      console.log(err);
  });
-
-<<<<<<< HEAD
-=======
 //  require("jsdom").env("", function(err, window) {
 //     if (err) {
 //         console.error(err);
@@ -67,8 +64,6 @@ function showDataFor(line, data){
         console.log(data[i].name);
       }
 }
-
->>>>>>> c778d9ec19e56552c4e20b2f56e90d09fdcbee2b
  app.get('/',function(req,res){
 
      res.render('index');
