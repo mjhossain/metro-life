@@ -32,7 +32,7 @@ mta.status('subway').then(function (result) {
    // console.log(result);
    var j = JSON.parse(result);
 
-   console.log(showDataOf(0, j))
+   //console.log(showDataOf(0, j))
 
     // showDataFor('7', j);
     //
@@ -67,7 +67,7 @@ function showDataFor(line, data){
       }
 }
 
-app.get("/testFunction", function(){
+app.get("/testFunction", function(res, req){
   console.log("Connected");
 })
 
@@ -79,5 +79,5 @@ app.get("/testFunction", function(){
 
 app.listen(port,function(){
 
-    console.log('hello');
+    //console.log('hello');
 })
