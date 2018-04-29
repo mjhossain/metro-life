@@ -18,16 +18,17 @@
                  contentType: "application/json",
                  success: function(data) {
 
-                    var line_name = JSON.stringify(data["name"]); // creates a var that holds line name
-                    var line_status = JSON.stringify(data["status"]);// creates a var that holds line status
+                    // var line_name = JSON.stringify(data["name"]); // creates a var that holds line name
+                    // var line_status = JSON.stringify(data["status"]);// creates a var that holds line status
 
 
                    //console.log("data in memory") //indicates that data was retrived from node
                    //var json_data = JSON.stringify(data); // stringifies the object
-                   var line_viewer = document.getElementById('train_line'); // gets the p tag that prints out line
-                   var status_viewer = document.getElementById('status_msg'); //gets the p tag that prints out line status
-                   line_viewer.innerHTML = line_name; //writes the data object inside p tag of train line.
-                   status_viewer.innerHTML = line_status; //writes the data object inside p tag of line status
+                   // var line_viewer = document.getElementById('train_line'); // gets the p tag that prints out line
+                    var status_viewer = document.getElementById('status_msg'); //gets the p tag that prints out line status
+                   // line_viewer.innerHTML = line_name; //writes the data object inside p tag of train line.
+                   // status_viewer.innerHTML = line_status; //writes the data object inside p tag of line status
+                      status_viewer.innerHTML = JSON.stringify(data);
                  },
                  error: console.error
                 });
