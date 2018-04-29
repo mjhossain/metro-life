@@ -13,7 +13,8 @@
               event.preventDefault();
               $.ajax({
                 url: "http://localhost:3000/testFunction",
-	               type: "GET", // if you want to send data via the "data" property change this to "POST". This can be omitted otherwise
+	               type: "POST", // if you want to send data via the "data" property change this to "POST". This can be omitted otherwise
+                 data: {test: 'hello world'},
                  success: function() {
                      console.log("hello");
                  },
