@@ -67,6 +67,10 @@ function showDataFor(line, data){
       }
 }
 
+app.get("/testFunction", function(){
+  console.log("Connected");
+})
+
  app.get('/',function(req,res){
 
      res.render('index');

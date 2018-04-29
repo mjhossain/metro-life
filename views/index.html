@@ -4,16 +4,25 @@
         <meta charset="utf-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <title>Metro Life</title>
+        <title>Metro Lifes</title>
         <link rel="stylesheet" href="../style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
           $(document).ready(function(){
-            $("#testDiv").on('click', function(){
-              alert("alert");
-            })
+            $('#test').click(function() {
+              alert("clikc");
+              e.preventDefault();
+              $.ajax({
+                url: "../app.js/testFunction",
+	               type: "GET", // if you want to send data via the "data" property change this to "POST". This can be omitted otherwise
+                 success: function() {
+                 },
+                 error: console.error
+               });
+            });
           })
         </script>
+
     </head>
     <body>
         <header>
@@ -47,7 +56,7 @@
                             <div class="item-container">
                                 <a class="mta-logo-link" href="#">
                                     <div class="train-logo-image">
-                                        <img src="../assets/1.png" alt="MTA 1 Train" id="testDiv">
+                                        <img id="test" src="../assets/1.png" alt="MTA 1 Train" >
                                     </div>
                                 </a>
                             </div>
