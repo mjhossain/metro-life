@@ -1,16 +1,10 @@
 $(function(){
     var line;
     $('img').click(function() {
-        if(line == null){
+            line = null;
             console.log('hey')
             line = $(this).attr("alt"); //get train class
             $(".train-status-inner").empty();
-        }else{
-            console.log('set')
-            line = null;
-            line = $(this).attr("class"); //get train class
-            $(".train-status-inner").empty();
-        }
             event.preventDefault();
             $.ajax({
                 type: "GET",

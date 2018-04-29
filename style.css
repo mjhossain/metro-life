@@ -63,11 +63,13 @@ main{
 .train-wrapper{
     height: 100%;
     width: 65%;
+    background-color: black;
 }
 .train-status{
     padding-top: 25px;
     padding-left: 25px;
-    max-height: 500px;
+    max-height: 450px;
+    overflow: scroll;
     width: 40%;
     /* border: 2px blue solid; */
 }
