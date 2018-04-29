@@ -61,15 +61,17 @@ main{
     /* flex: auto; */
     height: 100%;
     background-color: black;
-    width: 60%;
+    width: 65%;
 }
 .train-status{
     /* flex: auto; */
     padding-top: 25px;
-    text-align: center;
-    height: 400px;
+    padding-left: 25px;
+    /*text-align: center;*/
+    max-height: 500px;
     width: 40%;
     background-color: white;
+    overflow: scroll;
     /* border: 2px blue solid; */
 }
 .row:first-child{
@@ -119,7 +121,7 @@ footer{
     position: relative;
 }
 .footer{
-    height: 65px;
+    height: 100%;
 }
 .footer p{
     padding-top: 5px;
