@@ -17,7 +17,10 @@
                  data: {line: '2'},
                  contentType: "application/json",
                  success: function(data) {
-                   console.log(data);
+                   console.log("data in memory")
+                   var json_data = JSON.stringify(data);
+                   var viewer = document.getElementById('status_msg');
+                   viewer.innerHTML = json_data;
                  },
                  error: console.error
                 });
@@ -242,6 +245,8 @@
             </div>
             <div class="train-status">
                 <h1 class="train-title">Train Line</h1>
+                <br>
+                <p id="status_msg"></p>
             </div>
         </main>
         <footer>
