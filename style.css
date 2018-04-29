@@ -66,13 +66,13 @@ main{
     background-color: black;
 }
 .train-status{
+    border: 4px grey solid;
     padding-top: 25px;
     padding-left: 55px;
     padding-right: 45px;
-    max-height: 450px;
+    max-height: 463px;
     overflow: scroll;
     width: 40%;
-    /* border: 2px blue solid; */
 }
 .train-status-inner{
     background-color: white;
