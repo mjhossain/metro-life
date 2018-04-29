@@ -9,12 +9,12 @@
         <script>
           $(document).ready(function(){
             $('#test').click(function() {
-              alert("clikc");
+              alert("click");
               event.preventDefault();
               $.ajax({
-                url: "http://localhost:3000/testFunction",
+                url: "http://localhost:3000/getStatus",
 	               type: "GET", // if you want to send data via the "data" property change this to "POST". This can be omitted otherwise
-                 data: {test: 'hello world'},
+                 data: {line: '2'},
                  success: function() {
                      console.log("hello");
                  },
