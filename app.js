@@ -34,25 +34,10 @@ mta.status('subway').then(function (result) {
 
    //console.log(showDataOf(0, j))
 
-    // showDataFor('7', j);
-    //
-     // fs.writeFile("data.json", result, function(err) {
-     //     if (err) {
-     //         console.log(err);
-     //     }
-     // })
  }).catch(function (err) {
      console.log(err);
  });
 
-
-//  require("jsdom").env("", function(err, window) {
-//     if (err) {
-//         console.error(err);
-//         return;
-//     }
-//     var $ = require("jquery")(window);
-// });
  function showDataOf(train, data){
     let selected_train = data[train]
     return selected_train.name + "\n" + selected_train.status;
@@ -70,7 +55,6 @@ function showDataFor(line, data){
 app.get("/testFunction", function(req, res){
   console.log(req.param('test'));
 })
-
 
  app.get('/',function(req,res){
 
