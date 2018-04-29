@@ -72,13 +72,13 @@ img{
 
 }
 main{
-    height: 75vh;
+    height: 100%;
     position: relative;
     display: flex;
 }
 .train-wrapper{
     /* flex: auto; */
-    height: inherit;
+    height: 100%;
     background-color: black;
     width: 60%;
 }
@@ -86,9 +86,10 @@ main{
     /* flex: auto; */
     padding-top: 25px;
     text-align: center;
+    height: 400px;
     width: 40%;
     background-color: white;
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
 }
 .row:first-child{
     padding-top: 20px;
