@@ -5,7 +5,11 @@
 }
 body{
     font-family: 'Helvetica', sans-serif;
+<<<<<<< HEAD
     background-color: black;
+=======
+    /* background-color: black; */
+>>>>>>> a9547a64300531b88fdd7c499b3c7e4b2f205a35
     height: 100%;]
 }
 .float-left{
