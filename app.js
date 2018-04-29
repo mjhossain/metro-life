@@ -71,6 +71,7 @@ app.get("/testFunction", function(res, req){
   console.log("Connected");
 })
 
+
  app.get('/',function(req,res){
 
      res.render('index');
