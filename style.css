@@ -5,11 +5,7 @@
 }
 body{
     font-family: 'Helvetica', sans-serif;
-<<<<<<< HEAD
     background-color: black;
-=======
-    /* background-color: black; */
->>>>>>> a9547a64300531b88fdd7c499b3c7e4b2f205a35
     height: 100%;]
 }
 .float-left{
@@ -62,13 +58,13 @@ main{
     height: 100%;
     display: flex;
     overflow: auto;
+    background-color: white;
 }
 .train-wrapper{
     height: 100%;
     width: 65%;
 }
 .train-status{
-    background-color: white;
     padding-top: 25px;
     padding-left: 25px;
     max-height: 500px;
@@ -85,11 +81,15 @@ main{
     background-color: white;
 }
 .row:first-child{
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+.row{
+    padding: 10px 0;
 }
 .row:last-child{
-    padding-bottom: 10px;
-    /* padding-bottom: 0; */
+    padding-top: 0;
+    padding-bottom: 20px;
 }
 
 a.mta-logo-link{
@@ -124,6 +124,7 @@ footer{
     background-color: rgba(0,0,0,1);
     text-align: center;
     height: inherit;
+    position: relative;
 }
 .footer{
     /* position: absolute; */
