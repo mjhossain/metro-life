@@ -37,25 +37,6 @@ header{
 .nav-image{
     width: 400px;
 }
-.logo-layer{
-    /* background-image: url("../assets/logov1.png");
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-position: center center; */
-}
-/* .logo-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 25%;
-}  */
 
 /* Body */
 

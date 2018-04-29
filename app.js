@@ -75,6 +75,7 @@ app.get("/getStatus", function(req, res){
 
   let selected_train = j[line];
 
+  console.log(selected_train);
   res.send(selected_train);
 
    }).catch(function (err) {
@@ -97,62 +98,3 @@ app.listen(port,function(){
 
    //console.log('hello');
 })
-
-
-
-
-
-
-/*
-mta.status('subway').then(function (result) {
-	// result = JSON.stringify(result);
-	result = JSON.stringify(result).replace(/\\n|\\r/g, '');
-
-
-	var regex = /(<([^>]+)>)/ig; //Regex for removing all html tags
-	var reg = new RegExp("[ ]+","g"); // Resgex for removing whitespaces
-    result = result.replace(reg," ");
-    //
-	result = result.replace(regex, ""); //Calling 1st regex
-    //
-   // console.log(result);
-   var j = JSON.parse(result);
-
-   //console.log(showDataOf(0, j))
-
- }).catch(function (err) {
-     console.log(err);
- });
-
- function showDataOf(train, data){
-    let selected_train = data[train]
-    //return selected_train.name + "\n" + selected_train.status;
-    var i = selected_train.name + "\n" + selected_train.status;
-    console.log(i);
- }
-
-function showDataFor(line, data){
-
-    for(var i = 0; i < data.length; i++){
-
-        var lineRow = data[i];
-        console.log(data[i].name);
-      }
-}
-
-app.get("/testFunction", function(req, res){
-  console.log(req.param('test'));
-  showDataOf();
-  // showDataFor();
-})
-
- app.get('/',function(req,res){
-
-     res.render('index');
- })
-
-
-app.listen(port,function(){
-
-    //console.log('hello');
-})*/

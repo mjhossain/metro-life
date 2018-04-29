@@ -6,23 +6,7 @@
         <title>Metro Lifes</title>
         <link rel="stylesheet" href="../style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-          $(document).ready(function(){
-            $('#test').click(function() {
-
-              event.preventDefault();
-              $.ajax({
-                type: "GET",
-                url: "http://localhost:3000/getStatus",
-                 data: {line: '2'},
-                 success: function() {
-                     console.log($("#test"));
-                 },
-                 error: console.error
-                });
-            });
-          })
-        </script>
+        <script src="../main.js"></script>
     </head>
     <body>
         <header>
@@ -240,9 +224,13 @@
                 </div>
             </div>
             <div class="train-status">
-                <h1 class="train-title">Train Line</h1>
-                <br>
-                <p id="status_msg"></p>
+                <div class="train-status-name">
+                    <h1 class="train-name">Train Line</h1>
+                </div>
+                <div class="train-status-inner">
+
+                    <p id="status_msg"></p>
+                </div>
             </div>
         </main>
         <footer>
