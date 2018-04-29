@@ -52,8 +52,9 @@ function showDataFor(line, data){
       }
 }
 
-app.get("/testFunction", function(req, res){
-  console.log(req.param('test'));
+app.get("/testFunction", function(){
+  console.log("Connected");
+  // showDataFor();
 })
 
  app.get('/',function(req,res){
