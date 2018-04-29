@@ -9,14 +9,15 @@
         <script>
           $(document).ready(function(){
             $('#test').click(function() {
-              alert("click");
+
               event.preventDefault();
               $.ajax({
+                type: "GET",
                 url: "http://localhost:3000/getStatus",
-	               type: "GET", // if you want to send data via the "data" property change this to "POST". This can be omitted otherwise
                  data: {line: '2'},
-                 success: function() {
-                     console.log("hello");
+                 contentType: "application/json",
+                 success: function(data) {
+                   console.log(data);
                  },
                  error: console.error
                 });
