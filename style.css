@@ -85,7 +85,8 @@ main{
 .train-status{
     /* flex: auto; */
     padding-top: 25px;
-    text-align: center;
+    padding-left: 25px;
+    /*text-align: center;*/
     height: 400px;
     width: 40%;
     background-color: white;
@@ -138,7 +139,7 @@ footer{
     position: relative;
 }
 .footer{
-    height: 65px;
+    height: 100%;
 }
 .footer p{
     padding-top: 5px;

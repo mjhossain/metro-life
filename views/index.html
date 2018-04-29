@@ -17,10 +17,17 @@
                  data: {line: '2'},
                  contentType: "application/json",
                  success: function(data) {
-                   console.log("data in memory")
-                   var json_data = JSON.stringify(data);
-                   var viewer = document.getElementById('status_msg');
-                   viewer.innerHTML = json_data;
+
+                    var line_name = JSON.stringify(data["name"]); // creates a var that holds line name
+                    var line_status = JSON.stringify(data["status"]);// creates a var that holds line status
+
+
+                   //console.log("data in memory") //indicates that data was retrived from node
+                   //var json_data = JSON.stringify(data); // stringifies the object
+                   var line_viewer = document.getElementById('train_line'); // gets the p tag that prints out line
+                   var status_viewer = document.getElementById('status_msg'); //gets the p tag that prints out line status
+                   line_viewer.innerHTML = line_name; //writes the data object inside p tag of train line.
+                   status_viewer.innerHTML = line_status; //writes the data object inside p tag of line status
                  },
                  error: console.error
                 });
@@ -244,9 +251,10 @@
                 </div>
             </div>
             <div class="train-status">
-                <h1 class="train-title">Train Line</h1>
+                <h1 class="train-title" style="text-align: center;">Train Line</h1>
                 <br>
-                <p id="status_msg"></p>
+                <p><strong>Selected Line: </strong></p><p id="train_line"></p>
+                <p><strong>Line Status: </strong></p><p id="status_msg"></p>
             </div>
         </main>
         <footer>
