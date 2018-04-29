@@ -62,11 +62,14 @@ app.get("/getStatus", function(req, res){
 
   	result = JSON.stringify(result).replace(/\\n|\\r/g, '');
 
-  	var regex = /(<([^>]+)>)/ig; //Regex for removing all html tags
+
+/* Edits made here at 9:30am */
+
+  	//var regex = /(<([^>]+)>)/ig; //Regex for removing all html tags
   	var reg = new RegExp("[ ]+","g"); // Resgex for removing whitespaces
     result = result.replace(reg," ");
 
-  	result = result.replace(regex, ""); //Calling 1st regex
+  	//result = result.replace(regex, ""); //Calling 1st regex
 
     var j = JSON.parse(result); //Data in json format
 

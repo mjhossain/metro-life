@@ -87,9 +87,10 @@ main{
     padding-top: 25px;
     padding-left: 25px;
     /*text-align: center;*/
-    height: 400px;
+    max-height: 500px;
     width: 40%;
     background-color: white;
+    overflow: scroll;
     /* border: 2px blue solid; */
 }
 .row:first-child{
