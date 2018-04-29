@@ -67,6 +67,12 @@ function showDataFor(line, data){
       }
 }
 
+<<<<<<< HEAD
+=======
+app.get("/testFunction", function(){
+  console.log("Connected");
+})
+>>>>>>> 176c8a05c18970cdc603bdc871aed09185df1d34
 
  app.get('/',function(req,res){
 
