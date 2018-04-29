@@ -18,6 +18,65 @@ app.use("/", express.static(__dirname + '/'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
+//This function pulls the data from MTA and converts it to JSON
+function getMTAData(line){
+
+  mta.status('subway').then(function (result) {
+
+  	result = JSON.stringify(result).replace(/\\n|\\r/g, '');
+
+  	var regex = /(<([^>]+)>)/ig; //Regex for removing all html tags
+  	var reg = new RegExp("[ ]+","g"); // Resgex for removing whitespaces
+    result = result.replace(reg," ");
+
+  	result = result.replace(regex, ""); //Calling 1st regex
+
+    var j = JSON.parse(result); //Data in json format
+
+    getDataForLine(line, j); //Get the data for the line
+
+
+   }).catch(function (err) {
+       console.log(err);
+   });
+}
+
+function getDataForLine(line, data){
+
+  let selected_train = data[line] //array position
+  var i = selected_train["name"] + "\n" + selected_train["status"]; //Data for array position
+  
+  console.log(i);
+}
+
+
+//This is the function that ajax calls
+app.get("/getStatus", function(req, res){
+
+  var line = req.param('line');
+
+  getMTAData(line);
+
+})
+
+app.get('/',function(req,res){
+
+    res.render('index');
+})
+
+
+app.listen(port,function(){
+
+   //console.log('hello');
+})
+
+
+
+
+
+
+/*
 mta.status('subway').then(function (result) {
 	// result = JSON.stringify(result);
 	result = JSON.stringify(result).replace(/\\n|\\r/g, '');
@@ -40,7 +99,9 @@ mta.status('subway').then(function (result) {
 
  function showDataOf(train, data){
     let selected_train = data[train]
-    return selected_train.name + "\n" + selected_train.status;
+    //return selected_train.name + "\n" + selected_train.status;
+    var i = selected_train.name + "\n" + selected_train.status;
+    console.log(i);
  }
 
 function showDataFor(line, data){
@@ -54,6 +115,7 @@ function showDataFor(line, data){
 
 app.get("/testFunction", function(req, res){
   console.log(req.param('test'));
+  showDataOf();
   // showDataFor();
 })
 
@@ -66,4 +128,4 @@ app.get("/testFunction", function(req, res){
 app.listen(port,function(){
 
     //console.log('hello');
-})
+})*/
