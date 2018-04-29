@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <title>Metro Lifes</title>
         <link rel="stylesheet" href="../style.css">
@@ -16,13 +15,13 @@
                 url: "http://localhost:3000/testFunction",
 	               type: "GET", // if you want to send data via the "data" property change this to "POST". This can be omitted otherwise
                  success: function() {
+                     console.log("hello");
                  },
                  error: console.error
-               });
+                });
             });
           })
         </script>
-
     </head>
     <body>
         <header>
@@ -249,10 +248,5 @@
                 <p>&copy; CUNY Hackathon SP 2018 || By Team Metro-Life</p>
             </div>
         </footer>
-        <!-- <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-         <script data-main="libs/main" src="../jquery.js"></script> -->
     </body>
 </html>

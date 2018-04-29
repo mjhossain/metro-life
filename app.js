@@ -54,6 +54,7 @@ function showDataFor(line, data){
 
 app.get("/testFunction", function(){
   console.log("Connected");
+  // showDataFor();
 })
 
  app.get('/',function(req,res){
