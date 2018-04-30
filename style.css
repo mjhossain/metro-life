@@ -52,8 +52,17 @@ header{
 
 img{
     width: 100px;
-
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
+
+img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 main{
     height: 100%;
     display: flex;

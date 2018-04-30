@@ -7,41 +7,46 @@
         <link rel="stylesheet" href="../style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-          $(document).ready(function(){
-            $('.line').click(function() { //this line of code needs change so that its dynamic
-                  // alert("clicked");
-                //var catch_id = $('.line').attr('alt');
-                /*var catch_id = $('.line').attr
-                    console.log(catch_id);*/
-                    var catch_id = (this.alt);
-                    console.log("ID: " + catch_id);
+          // $(document).ready(function(){
+          //   $('.line').click(function() { //this line of code needs change so that its dynamic
+          //         // alert("clicked");
+          //       //var catch_id = $('.line').attr('alt');
+          //       /*var catch_id = $('.line').attr
+          //           console.log(catch_id);*/
+          //           var catch_id = (this.alt);
+          //           console.log("ID: " + catch_id);
+          //
+          //       // var line_id = catch_id.alt;
+          //     event.preventDefault();
+          //     $.ajax({
+          //       type: "GET",
+          //       url: "http://localhost:3000/getStatus",
+          //        data: {line: catch_id}, //this line has to change to
+          //        contentType: "application/json",
+          //        success: function(data) {
+          //
+          //           //var line_name = JSON.stringify(data["name"]); // creates a var that holds line name
+          //           //var line_status = JSON.stringify(data["status"]);// creates a var that holds line status
+          //           console.log(JSON.stringify(data));
+          //
+          //          //console.log("data in memory") //indicates that data was retrived from node
+          //          //var json_data = JSON.stringify(data); // stringifies the object
+          //          var line_viewer = document.getElementById('train_line'); // gets the p tag that prints out line
+          //          var status_viewer = document.getElementById('status_msg'); //gets the p tag that prints out line status
+          //          line_viewer.innerHTML = JSON.stringify(data.name); //writes the data object inside p tag of train line.
+          //
+          //          status_viewer.innerHTML = JSON.stringify(data.text); //writes the data object inside p tag of line status
+          //        },
+          //        error: console.error
+          //       });
+          //   });
+          // })
 
-                // var line_id = catch_id.alt;
-              event.preventDefault();
-              $.ajax({
-                type: "GET",
-                url: "http://localhost:3000/getStatus",
-                 data: {line: catch_id}, //this line has to change to
-                 contentType: "application/json",
-                 success: function(data) {
-
-                    //var line_name = JSON.stringify(data["name"]); // creates a var that holds line name
-                    //var line_status = JSON.stringify(data["status"]);// creates a var that holds line status
+</script>
+  <!-- // Anthony's code link -->
+  <script src="main.js"></script>
 
 
-                   //console.log("data in memory") //indicates that data was retrived from node
-                   //var json_data = JSON.stringify(data); // stringifies the object
-                   var line_viewer = document.getElementById('train_line'); // gets the p tag that prints out line
-                   var status_viewer = document.getElementById('status_msg'); //gets the p tag that prints out line status
-                   line_viewer.innerHTML = JSON.stringify(data.name); //writes the data object inside p tag of train line.
-
-                   status_viewer.innerHTML = JSON.stringify(data.text); //writes the data object inside p tag of line status
-                 },
-                 error: console.error
-                });
-            });
-          })
-        </script>
     </head>
     <body>
         <header>
@@ -259,10 +264,9 @@
                 </div>
             </div>
             <div class="train-status">
-                <h1 class="train-title" style="text-align: center;">Train Line</h1>
-                <br>
-                <p><strong>Selected Line: </strong></p><p id="train_line"></p>
-                <p><strong>Line Status: </strong></p><p id="status_msg"></p>
+                <h1 class="train-name"></h1>
+                <div class="train-status-inner">
+                </div>
             </div>
         </main>
         <footer>
